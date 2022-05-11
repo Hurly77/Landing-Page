@@ -20,6 +20,7 @@
 
 <style>
   /* Styles Go Here */
+
   body {
     margin: 0px;
     font-family: Roboto;
@@ -38,7 +39,15 @@
     /* put link styles */
   }
 
+  h1 {
+    font-size: 50px;
+  }
+
   section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 95vh;
   }
 
@@ -61,6 +70,8 @@
   .card-container {
     display: flex;
   }
+
+  .section-1 {}
 </style>
 
 <body>
@@ -69,35 +80,41 @@
     <div class="nav-start"></div>
     <div class="nav-center"></div>
     <div class="nav-end"></div>
-    <a href="#">Example Link</a>
+    <a href="#example">Example Link</a>
   </nav>
-  <section>
+
+  <main>
     <!--Home-->
-    <article id="home">
+    <section id="home">
       <h1>home</h1>
-    </article>
+      <img>
+    </section>
 
     <!--About-->
-    <article id="about">
+    <section id="about">
       <h1>about</h1>
-    </article>
+    </section>
 
     <!--Team-->
-    <article id="team">
+    <section id="team">
       <h1>team</h1>
 
-    </article>
+    </section>
 
     <!--Reviews-->
-    <article id="reviews">
+    <section id="reviews">
       <h1>reviews</h1>
-      <main class="card-container">
+      <article class="card-container">
         <div class="review-card">review 1</div>
         <div class="review-card">review 2</div>
         <div class="review-card">review 3</div>
-      </main>
-    </article>
-  </section>
+      </article>
+    </section>
+
+    <section id="example">
+      <h1 id="example-text">EXample</h1>
+    </section>
+  </main>
 
   <footer>
     copy right
