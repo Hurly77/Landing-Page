@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manny&apos;s Landing Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    rel="stylesheet">
+</head>
+
+<!--
+    The Styling is under the Style tags
+   -->
+
+<style>
+  /* Styles Go Here */
+  body {
+    margin: 0px;
+    font-family: Roboto;
+    font-size: large;
+  }
+
+  .navbar {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: bisque;
+  }
+
+  .link {
+    /* put link styles */
+  }
+
+  section {
+    height: 95vh;
+  }
+
+  footer {
+    padding: 4px;
+    display: flex;
+    height: 25px;
+    justify-content: center;
+    color: gray;
+    background-color: antiquewhite;
+  }
+
+  .review-card {
+    margin: 2px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+  }
+
+  .card-container {
+    display: flex;
+  }
+</style>
+
+<body>
+  <nav class="navbar">
+    <!-- Navbar Goes Here-->
+    <div class="nav-start"></div>
+    <div class="nav-center"></div>
+    <div class="nav-end"></div>
+    <a href="#">Example Link</a>
+  </nav>
+  <section>
+    <!--Home-->
+    <article id="home">
+      <h1>home</h1>
+    </article>
+
+    <!--About-->
+    <article id="about">
+      <h1>about</h1>
+    </article>
+
+    <!--Team-->
+    <article id="team">
+      <h1>team</h1>
+
+    </article>
+
+    <!--Reviews-->
+    <article id="reviews">
+      <h1>reviews</h1>
+      <main class="card-container">
+        <div class="review-card">review 1</div>
+        <div class="review-card">review 2</div>
+        <div class="review-card">review 3</div>
+      </main>
+    </article>
+  </section>
+
+  <footer>
+    copy right
+  </footer>
+</body>
+
+</html>
