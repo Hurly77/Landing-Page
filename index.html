@@ -125,26 +125,47 @@
     text-align: center;
   }
 
+
   .member-avatar {
     border-radius: 100%;
     height: 10rem;
   }
 
-  .review-card {
-    margin: 2px;
-    width: 100px;
-    height: 100px;
-    border-radius: 4px;
-    border: 1px solid black;
-  }
+
 
   .card-container {
     display: flex;
+    gap: 5rem;
   }
 
   .reviews {
     display: flex;
     flex-direction: column;
+
+  }
+
+  .review-card {
+    overflow: hidden;
+    margin: 2px;
+    width: 200px;
+    height: 300px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px 3px rgb(0, 0, 0, .3);
+  }
+
+  .review-card>p {
+    font-size: small;
+    padding: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+  }
+
+  .review-card-img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
   }
 </style>
 
@@ -155,10 +176,10 @@
     <div class="nav-center"></div>
     <div class="nav-end"></div>
 
-    <a class="link"  href="#home">Home</a>
-    <a class="link"  href="#about">About</a>
-    <a class="link"  href="#team">Team</a>
-    <a class="link"  href="#reviews">Reviews</a>
+    <a id="1-link" class="link" href="#home">Home</a>
+    <a id="2-link" class="link" href="#about">About</a>
+    <a id="3-link" class="link" href="#team">Team</a>
+    <a id="4-link" class="link" href="#reviews">Reviews</a>
 
   </nav>
 
@@ -229,11 +250,37 @@
     <section id="reviews" class="reviews">
       <h1>reviews</h1>
       <article class="card-container">
+
         <div class="review-card">
-          review 1
+          <img class="review-card-img" src="./images/review-1.jpg">
+          <p>
+            I brought my son in for his birthday for a few hours of gaming on
+            our road trip.
+            The gentleman at the front desk went above and beyond to ensure the
+            whole family
+
+          </p>
         </div>
-        <div class="review-card">review 2</div>
-        <div class="review-card">review 3</div>
+
+        <div class="review-card">
+          <img class="review-card-img" src="./images/review-3.jpg">
+
+          <p>I brought my son in for his birthday for a few hours of gaming on
+            our road trip.
+            The gentleman at the front desk went above and beyond to ensure the
+            whole family
+          </p>
+        </div>
+
+        <div class="review-card">
+          <img class="review-card-img" src="./images/review-2.jpg">
+          <p>I brought my son in for his birthday for a few hours of gaming on
+            our road trip.
+            The gentleman at the front desk went above and beyond to ensure the
+            whole family
+          </p>
+        </div>
+
       </article>
     </section>
   </main>
@@ -241,6 +288,24 @@
   <footer>
     copy right
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      document.getElementById("1-link").addEventListener('click',
+        document.querySelector('#home').scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+      )
+
+      document.getElementById("2-link").addEventListener('click',
+        document.querySelector('#about').scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+      )
+      document.getElementById("3-link").addEventListener('click',
+        document.querySelector('#team').scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+      )
+      document.getElementById("4-link").addEventListener('click',
+        document.querySelector('#reviews').scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+      )
+    })
+  </script>
 </body>
 
 </html>
